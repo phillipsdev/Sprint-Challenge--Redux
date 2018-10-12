@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import './App.css';
-import SmurfForm from './SmurfForm';
-import Smurfs from './Smurfs';
+import React, { Component } from "react";
+import "./App.css";
+import SmurfForm from "./SmurfForm";
+import Smurfs from "./Smurfs";
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 

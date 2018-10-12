@@ -1,18 +1,24 @@
 /*
   Be sure to import in all of the action types from `../actions`
 */
-import { GETTING_SMURFS, GOT_SMURFS, CREATING_SMURF, CREATED_SMURF, ERROR } from '../actions';
+import {
+  GETTING_SMURFS,
+  GOT_SMURFS,
+  CREATING_SMURF,
+  CREATED_SMURF,
+  ERROR
+} from "../actions";
 
 /*
- Your initial/default state for this project could look a lot like this
- {
-   smurfs: [],
-   fetchingSmurfs: false
-   addingSmurf: false
-   updatingSmurf: false
-   deletingSmurfs: false
-   error: true
- }
+  Your initial/default state for this project could look a lot like this
+  {
+    smurfs: [],
+    fetchingSmurfs: false
+    addingSmurf: false
+    updatingSmurf: false
+    deletingSmurfs: false
+    error: true
+  }
 */
 
 const initialState = {
@@ -21,8 +27,8 @@ const initialState = {
   gotSmurfs: false,
   creatingSmurf: false,
   createdSmurf: false,
-  error: true,
-}
+  error: true
+};
 
 /*
   You'll only need one smurf reducer for this project.
@@ -36,7 +42,7 @@ export const rootReducer = (state = initialState, action) => {
     case GETTING_SMURFS:
       return {
         ...state,
-        gettingSmurfs: true,
+        gettingSmurfs: true
       };
 
     case GOT_SMURFS:
@@ -44,13 +50,13 @@ export const rootReducer = (state = initialState, action) => {
         ...state,
         gettingSmurfs: false,
         gotSmurfs: true,
-        smurfs: action.payload,
+        smurfs: action.payload
       };
 
     case CREATING_SMURF:
       return {
         ...state,
-        creatingSmurf: true,
+        creatingSmurf: true
       };
 
     case CREATED_SMURF:
@@ -58,7 +64,7 @@ export const rootReducer = (state = initialState, action) => {
         ...state,
         creatingSmurf: false,
         createdSmurf: true,
-        smurfs: action.payload,
+        smurfs: action.payload
       };
 
     case ERROR:
@@ -68,9 +74,9 @@ export const rootReducer = (state = initialState, action) => {
         gotSmurfs: false,
         creatingSmurfs: false,
         createdSmurf: false,
-        error: action.payload,
+        error: action.payload
       };
-    
+
     default:
       return state;
   }
